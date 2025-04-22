@@ -1,0 +1,2 @@
+sudo gst-launch-1.0 -v filesrc location=/home/abhishek/driving_video.mp4 ! decodebin ! videoconvert ! timeoverlay halignment=right valignment=top ! x264enc speed-preset=ultrafast tune=zerolatency ! rtph264pay name=pay0 pt=96 ! udpsink host=192.168.0.100 port=5000
+
